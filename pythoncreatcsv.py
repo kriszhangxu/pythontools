@@ -4,7 +4,6 @@
 my python tools
 
 import datetime
-import openpyxl
 import codecs
 import csv
 class Ccsv:
@@ -12,7 +11,7 @@ class Ccsv:
         csvfile = self.getcsvname(savepath)
         CsvHeader = ["姓名","年龄"]
         f = open(csvfile, 'wb')
-        #设定语言格式，
+        #设定语言格式
         f.write(codecs.BOM_UTF8)
         #设定csv的导出格式
         writer = csv.writer(f, dialect='excel')
