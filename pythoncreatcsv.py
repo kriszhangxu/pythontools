@@ -1,4 +1,6 @@
 # pythontools
+#!/bin/bash
+# -*- encoding: utf8 -*-
 my python tools
 
 import datetime
@@ -6,7 +8,7 @@ import openpyxl
 import codecs
 import csv
 class Ccsv:
-    def CreatCsv(self, datas, savepath=''):
+    def CreatCsv(self, datas, savepath='./'):
         csvfile = self.getcsvname(savepath)
         CsvHeader = ["姓名","年龄"]
         f = open(csvfile, 'wb')
@@ -44,4 +46,5 @@ class Ccsv:
         
 if __name__ == "__main__":
     creatcsv = Ccsv()
-    dats = [["张三",19],["李四",20]]
+    datas = [["张三",19],["李四",20]]
+    creatcsv.CreatCsv(datas)
